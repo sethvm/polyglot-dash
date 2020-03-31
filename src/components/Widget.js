@@ -10,7 +10,7 @@ class Widget extends Component {
                     <h3>{this.props.header}</h3>
                     <img src={this.props.icon} className='logo' alt='logo' />
                 </div>
-                {this.props.children}
+                <div className='content'>{this.props.children}</div>
             </div>
         );
     }

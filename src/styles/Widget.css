@@ -1,14 +1,12 @@
 .widget {
     width: auto;
     height: auto;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 20px;
     background: #202A3b;
     color: #ffffff;
     border-radius: 7px;
-    margin: 20px;
+    margin: 8px;
+    flex-grow: 1;
 }
 
 .header {
@@ -21,4 +19,12 @@
 .logo {
     width: 48px;
     height: 48px;
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 5%;
 }

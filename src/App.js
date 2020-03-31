@@ -3,11 +3,13 @@ import './App.css';
 
 import Widget from './components/Widget';
 
+import Logo from './logo.svg';
+
 function App() {
   return (
     <div className="App">
         <div className='App-header'>
-            <Widget header='Polyglot Dash'>
+            <Widget header='Polyglot Dash' icon={Logo}>
                 <p>Flexible dashboard project</p>
             </Widget>
         </div>

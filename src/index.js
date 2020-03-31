@@ -3,5 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root')
-);
+import './fonts/Comfortaa-Light.ttf';
+
+ReactDOM.render(<App />, document.getElementById('root'));

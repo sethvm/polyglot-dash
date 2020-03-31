@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Widget from './components/Widget';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
+        <div className='App-header'>
+            <Widget header='Polyglot Dash'>
+                <p>Flexible dashboard project</p>
+            </Widget>
+        </div>
     </div>
   );
 }

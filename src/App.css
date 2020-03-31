@@ -8,12 +8,12 @@
     padding: 30px;
 }
 
-.App-header {
+.row {
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     flex-flow: row wrap;
     min-height: 100vh;
     font-family: 'Comfortaa', sans-serif;
-    letter-spacing: 10%;
+    margin: 0;
 }

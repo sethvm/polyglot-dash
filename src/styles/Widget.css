@@ -26,5 +26,5 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    line-height: 5%;
+    line-height: 25px;
 }

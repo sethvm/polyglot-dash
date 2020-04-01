@@ -11,8 +11,6 @@ class Dash extends Component {
             <Row className='row'>
                 <Col lg={3} sm={6}>
                     <Widget header='Donut Chart'>
-                        Some description text
-                        <br />followed by a line break
                         <DonutChart 
                         width={200}
                         height={200} />
@@ -20,8 +18,6 @@ class Dash extends Component {
                 </Col>
                 <Col lg={3} sm={6}>
                     <Widget header='Donut Chart'>
-                        Some description text
-                        <br />followed by a line break
                         <DonutChart 
                         width={200}
                         height={200} />
@@ -29,8 +25,6 @@ class Dash extends Component {
                 </Col>
                 <Col lg={3} sm={6}>
                     <Widget header='Donut Chart'>
-                        Some description text
-                        <br />followed by a line break
                         <DonutChart 
                         width={200}
                         height={200} />
@@ -38,8 +32,6 @@ class Dash extends Component {
                 </Col>
                 <Col lg={3} sm={6}>
                     <Widget header='Line Graph'>
-                        Some description text
-                        <br />followed by a line break
                         <LineChart 
                         width={200}
                         height={200} />

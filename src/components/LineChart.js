@@ -8,9 +8,9 @@ import { XYPlot,
 
 class LineChart extends Component {
 
-    render() {
-
-        const sampleData = [
+    constructor(props) {
+        super(props);
+        this.state = { data: [
             {x: 0, y: 8},
             {x: 1, y: 5},
             {x: 2, y: 4},
@@ -21,15 +21,17 @@ class LineChart extends Component {
             {x: 7, y: 3},
             {x: 8, y: 2},
             {x: 9, y: 0}
-        ];
+        ]}
+    }
 
+    render() {
         return(
             <XYPlot
             height={this.props.height}
             width={this.props.width}>
                 <VerticalGridLines />
                 <HorizontalGridLines />
-                <LineSeries data={sampleData} />
+                <LineSeries data={this.state.data} />
                 <XAxis />
                 <YAxis />
             </XYPlot>

@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card';
 
 import '../styles/Widget.css';
 
 class Widget extends Component {
     render() {
         return(
-            <div className='widget'>
-                <div className='header'>
-                    <h3>{this.props.header}</h3>
-                    <img src={this.props.icon} className='logo' alt='logo' />
-                </div>
-                <div className='content'>{this.props.children}</div>
-            </div>
+            <Card className='widget'>
+                <Card.Body>
+                    <Card.Title>
+                        <strong>{this.props.header}</strong>
+                    </Card.Title>
+                    <Card.Text className='content'>
+                        {this.props.children}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         );
     }
 }

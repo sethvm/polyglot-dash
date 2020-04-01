@@ -3,18 +3,13 @@
     src: local('Comfortaa'), url('./fonts/Comfortaa-Light.ttf') format('truetype');
 }
 
-.App {
+.wrapper {
     background: #202020;
-    padding: 20px;
-    min-height: 100vh;
+    font-family: 'Comfortaa', sans-serif;
 }
 
-.row {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-flow: row wrap;
-    font-family: 'Comfortaa', sans-serif;
-    margin: 0;
+.dashboard {
+    padding: 30px;
+    min-height: 100vh;
+    min-width: 100%;
 }

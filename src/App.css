@@ -6,14 +6,15 @@
 .App {
     background: #202020;
     padding: 30px;
+    min-height: 100vh;
 }
 
 .row {
+    width: 100%;
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     flex-flow: row wrap;
-    min-height: 100vh;
     font-family: 'Comfortaa', sans-serif;
     margin: 0;
 }

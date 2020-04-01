@@ -12,7 +12,7 @@ function App() {
     <div className="App">
         <div className='row'>
             <Widget header='Polyglot Dash' icon={Logo}>
-                <p>A w.i.p. dashboard for data visualization</p>
+                <p>A w.i.p. dashboard UI</p>
             </Widget>
             <Widget header='Radial Chart' icon={Logo}>
                 <p>Data Description
@@ -24,13 +24,33 @@ function App() {
                 width={200}
                 height={200} />
             </Widget>
+            <Widget header='Radial Chart' icon={Logo}>
+                <p>Data Description
+                    <br/>• Point 1
+                    <br/>• Point 2
+                    <br/>• Point 3
+                </p>
+                <DonutChart 
+                width={200}
+                height={200} />
+            </Widget>
+        </div>
+        <div className='row'>
             <Widget header='Line Graph' icon={Logo}>
                 <p>Data Description
                     <br/>Lorem Ipsum dolor sit amet
                 </p>
                 <LineChart 
-                width={200}
-                height={200} />
+                width={300}
+                height={300} />
+            </Widget>
+            <Widget header='Line Graph' icon={Logo}>
+                <p>Data Description
+                    <br/>Lorem Ipsum dolor sit amet
+                </p>
+                <LineChart 
+                width={300}
+                height={300} />
             </Widget>
         </div>
     </div>

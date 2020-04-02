@@ -4,7 +4,7 @@ import Logo from './logo.svg';
 
 import './Navbar.css'
 
-function Header() {
+export default function Header() {
     return (
         <Navbar className='navbar' variant='dark'>
             <Navbar.Brand>
@@ -16,5 +16,3 @@ function Header() {
         </Navbar>
     );
 }
-
-export default Header;

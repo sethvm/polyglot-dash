@@ -6,7 +6,8 @@ import { XYPlot,
     YAxis,
     LineSeries } from 'react-vis';
 
-class LineChart extends Component {
+
+export default class LineChart extends Component {
 
     constructor(props) {
         super(props);
@@ -39,4 +40,7 @@ class LineChart extends Component {
     }
 }
 
-export default LineChart;
+LineChart.defaultProps = {
+    width: 150,
+    height: 150
+}

@@ -1,11 +1,6 @@
-@font-face {
-    font-family: 'Comfortaa';
-    src: local('Comfortaa'), url('./fonts/Comfortaa-Light.ttf') format('truetype');
-}
-
 .wrapper {
     background: #202020;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Sen', sans-serif;
 }
 
 .dashboard {

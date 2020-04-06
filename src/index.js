@@ -4,6 +4,6 @@ import './index.css';
 import "bootstrap/dist/css/bootstrap.css";
 
 import App from './App';
-import './fonts/Comfortaa-Light.ttf';
+import './fonts/Sen-Regular.ttf';
 
 ReactDOM.render(<App />, document.getElementById('root'));

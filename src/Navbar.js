@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <Navbar className='navbar' variant='dark'>
             <Navbar.Brand>
-                <strong>Polyglot Dash</strong>
+                POLYGLOT DASH
             </Navbar.Brand>
             <Navbar.Brand>
                 <img className='logo' src={Logo} alt='logo' />

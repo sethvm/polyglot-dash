@@ -7,28 +7,44 @@ import DonutChart from './components/DonutChart';
 export default class Dash extends Component {
     render() {
         return(
+            <>
             <Row className='row'>
-                <Col lg={3} sm={6}>
-                    <Widget header='Widget'>
-                        <DonutChart />
+                <Col lg={3} md={4}>
+                    <Widget header='NUMBER COUNT'>
+                        <h3>27.8K</h3>
                     </Widget>
                 </Col>
-                <Col lg={3} sm={6}>
-                    <Widget header='Widget'>
+                <Col lg={9} md={8}>
+                    <Widget header='WIDGET'>
                         <DonutChart />
-                    </Widget>
-                </Col>
-                <Col lg={3} sm={6}>
-                    <Widget header='Widget'>
                         <DonutChart />
-                    </Widget>
-                </Col>
-                <Col lg={3} sm={6}>
-                    <Widget header='Widget'>
                         <DonutChart />
                     </Widget>
                 </Col>
             </Row>
+            <Row className='row'>
+                <Col lg={3} md={9}>
+                    <Widget header='NUMBER COUNT'>
+                        <h3>27.8K</h3>
+                    </Widget>
+                </Col>
+                <Col lg={3} md={9}>
+                    <Widget header='WIDGET'>
+                        <DonutChart />
+                    </Widget>
+                </Col>
+                <Col lg={3} md={9}>
+                    <Widget header='WIDGET'>
+                        <DonutChart />
+                    </Widget>
+                </Col>
+                <Col lg={3} md={9}>
+                    <Widget header='WIDGET'>
+                        <DonutChart />
+                    </Widget>
+                </Col>
+            </Row>
+            </>
         );
     }
 }

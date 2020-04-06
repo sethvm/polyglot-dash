@@ -8,8 +8,8 @@ class Widget extends Component {
         return(
             <Card className='widget'>
                 <Card.Body>
-                    <Card.Title>
-                        <strong>{this.props.header}</strong>
+                    <Card.Title className='label'>
+                        {this.props.header}
                     </Card.Title>
                     <Card.Text className='content'>
                         {this.props.children}

@@ -8,10 +8,7 @@ const widgetStyle = makeStyles({
     root: {
         background: '#202a3b',
         borderRadius: '7px',
-        marginTop: '10px',
-        marginBottom: '10px',
-        marginLeft: '0px',
-        marginRight: '0px',
+        margin: '10px',
     },
     label: {
         color: '#b7b7b7',

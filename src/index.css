@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Sen';
-    src: local('Sen'), url('./fonts/Sen-Regular.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: local('Roboto'), url('./fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 body {
     margin: 0;
     font-size: 16px;
-    font-family: 'Sen', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

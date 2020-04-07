@@ -1,23 +1,43 @@
-import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
-import '../styles/Widget.css';
+const widgetStyle = makeStyles({
+    root: {
+        background: '#202a3b',
+        borderRadius: '7px',
+        marginTop: '10px',
+        marginBottom: '10px',
+        marginLeft: '0px',
+        marginRight: '0px',
+    },
+    label: {
+        color: '#b7b7b7',
+    },
+    content: {
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        lineHeight: '25px',
+        color: '#ffffff',
+    },
+})
 
-class Widget extends Component {
-    render() {
-        return(
-            <Card className='widget'>
-                <Card.Body>
-                    <Card.Title className='label'>
-                        {this.props.header}
-                    </Card.Title>
-                    <Card.Text className='content'>
-                        {this.props.children}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        );
-    }
+export default function Widget(props) {
+    const widget = widgetStyle();
+    return(
+        <Card className={widget.root}>
+            <CardContent>
+                <Typography className={widget.label}>
+                    {props.header}
+                </Typography>
+                <Typography className={widget.content}>
+                    {props.children}
+                </Typography>
+            </CardContent>
+        </Card>
+    );
 }
-
-export default Widget;

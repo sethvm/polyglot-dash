@@ -8,12 +8,12 @@ export default function Dash() {
     return(
         <>
         <Grid container>
-            <Grid item lg={3} md={3} sm={3} xs={12}>
+            <Grid item lg={2} md={3} sm={3} xs={12}>
                 <Widget header='NUMBER COUNT'>
                     <h3>27.8K</h3>
                 </Widget>
             </Grid>
-            <Grid item lg={9} md={9} sm={9} xs={12}>
+            <Grid item lg={10} md={9} sm={9} xs={12}>
                 <Widget header='WIDGET'>
                     <DonutChart />
                     <DonutChart />

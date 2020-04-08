@@ -1,6 +1,6 @@
 # polyglot-dash
-A flexible React dashboard for use with data visualization projects.
+A flexible dashboard for use with data visualization projects.
 
-Created using [React.js](https://reactjs.org/) and [Bootstrap](https://react-bootstrap.github.io/)
+Created using [React.js](https://reactjs.org/) and [Material UI](https://material-ui.com/)
 
-Charting components created using [React-Vis](https://uber.github.io/react-vis/)
+Charting components created using the [React-Vis](https://uber.github.io/react-vis/) library

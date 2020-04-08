@@ -23,7 +23,7 @@ export default function Navbar() {
     return(
         <AppBar className={appbar.bar}>
             <Toolbar className={appbar.toolbox}>
-                <Typography variant='h5'>
+                <Typography variant='h6'>
                     POLYGLOT DASH
                 </Typography>
                 <DashboardRoundedIcon fontSize='large' />

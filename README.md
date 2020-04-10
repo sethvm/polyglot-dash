@@ -1,5 +1,5 @@
 # polyglot-dash
-A flexible dashboard for use with data visualization projects.
+A flexible frontend dashboard for use with data visualization projects.
 
 Created using [React.js](https://reactjs.org/) and [Material UI](https://material-ui.com/)
 

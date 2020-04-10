@@ -16,15 +16,20 @@ export default function Dash() {
     const dash = styleDash();
 
     const data1 = [
-        { angle: 70, radius: 10, innerRadius: 6 },
-        { angle: 30, radius: 10, innerRadius: 6 }
+        { angle: 26, radius: 10, innerRadius: 6, color: '#AB1F20' },
+        { angle: 6, radius: 10, innerRadius: 6, color: '#E5E577' },
+        { angle: 16, radius: 10, innerRadius: 6, color: '#C67017' },
+        { angle: 20, radius: 10, innerRadius: 6, color: '#004771' },
+        { angle: 9, radius: 10, innerRadius: 6, color: '#7F7F7F' },
+        { angle: 11, radius: 10, innerRadius: 6, color: '#E377C2' },
+        { angle: 12, radius: 10, innerRadius: 6, color: '#670067' }
     ]
 
     const data2 = [
-        { angle: 10, radius: 10, innerRadius: 6 },
-        { angle: 30, radius: 10, innerRadius: 6 },
-        { angle: 50, radius: 10, innerRadius: 6 },
-        { angle: 10, radius: 10, innerRadius: 6 }
+        { angle: 33, radius: 10, innerRadius: 6, color: '#2B93DB' },
+        { angle: 23, radius: 10, innerRadius: 6, color: '#1FB45D' },
+        { angle: 15, radius: 10, innerRadius: 6, color: '#B45C1F' },
+        { angle: 29, radius: 10, innerRadius: 6, color: '#B41F77' }
     ]
 
     return(
@@ -55,8 +60,8 @@ export default function Dash() {
                 <Widget lg={9} md={9} sm={8} xs={12}
                 header='WIDGET'>
                     <DonutChart />
-                    <DonutChart data={data1} />
-                    <DonutChart data={data2} />
+                    <DonutChart data={data1} color='literal' />
+                    <DonutChart data={data2} color='literal' />
                 </Widget>
             </Grid>
         </div>

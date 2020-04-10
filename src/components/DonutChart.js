@@ -11,6 +11,7 @@ export default class DonutChart extends Component {
     render() {
         return (
             <RadialChart
+            colorType={this.props.color}
             width={this.props.width}
             height={this.props.height}
             data={this.state.data} />
@@ -19,6 +20,7 @@ export default class DonutChart extends Component {
 }
 
 DonutChart.defaultProps = {
+    color: 'category',
     width: 125,
     height: 125,
     data: [

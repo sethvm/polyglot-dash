@@ -25,7 +25,9 @@ const widgetStyle = makeStyles({
 })
 
 export default function Widget(props) {
+
     const widget = widgetStyle();
+    
     return(
         <Grid item 
         lg={props.lg}

@@ -33,7 +33,7 @@ export default class Dash extends Component {
             },
             {
                 "label": 'Statistic (%)',
-                "value": 6,
+                "value": 15,
                 "color": '#E5E577',
             },
             {
@@ -45,11 +45,6 @@ export default class Dash extends Component {
                 "label": 'Statistic (%)',
                 "value": 20,
                 "color": '#AB1F20',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 9,
-                "color": '#7F7F7F',
             },
             {
                 "label": 'Statistic (%)',

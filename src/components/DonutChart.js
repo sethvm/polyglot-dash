@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
-import { RadialChart } from 'react-vis';
+import Chart from 'chart.js';
 
 export default class DonutChart extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { data: this.props.data };
+        this.chartRef = React.createRef();
+    }
+
+    componentDidUpdate() {
+        this.myChart.update();
+    }
+
+    componentDidMount() {
+        this.myChart = new Chart(this.chartRef.current, {
+            type: 'doughnut',
+            data: {
+                labels: this.props.data.map(d => d.label),
+                datasets: [{
+                    data: this.props.data.map(d => d.value),
+                    backgroundColor: this.props.data.map(d => d.color),
+                    borderColor: 'transparent'
+                }]
+            }
+        });
     }
 
     render() {
         return (
-            <RadialChart
-            colorType={this.props.color}
-            width={this.props.width}
-            height={this.props.height}
-            data={this.state.data} />
+            <canvas ref={this.chartRef} />
         );
     }
-}
-
-DonutChart.defaultProps = {
-    color: 'category',
-    width: 125,
-    height: 125,
-    data: [
-        { angle: 20, radius: 10, innerRadius: 6 },
-        { angle: 20, radius: 10, innerRadius: 6 },
-        { angle: 20, radius: 10, innerRadius: 6 },
-        { angle: 20, radius: 10, innerRadius: 6 },
-        { angle: 20, radius: 10, innerRadius: 6 }
-    ],
 }

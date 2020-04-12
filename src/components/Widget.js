@@ -21,7 +21,7 @@ const widgetStyle = makeStyles({
         alignItems: 'center',
         lineHeight: '25px',
         color: '#ffffff',
-    },
+    }
 })
 
 export default function Widget(props) {

@@ -33,7 +33,7 @@ export default class Dash extends Component {
             },
             {
                 "label": 'Statistic (%)',
-                "value": 15,
+                "value": 27,
                 "color": '#E5E577',
             },
             {
@@ -45,12 +45,7 @@ export default class Dash extends Component {
                 "label": 'Statistic (%)',
                 "value": 20,
                 "color": '#AB1F20',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 12,
-                "color": '#670067',
-            },
+            }
         ]
         
         const data3 = [

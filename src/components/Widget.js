@@ -19,12 +19,8 @@ const widgetStyle = makeStyles({
         color: '#b7b7b7',
     },
     content: {
-        flexGrow: 1,
         display: 'flex',
-        flexFlow: 'row wrap',
         justifyContent: 'space-around',
-        alignItems: 'center',
-        lineHeight: '25px',
         color: '#ffffff',
     }
 })

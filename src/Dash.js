@@ -16,147 +16,164 @@ export default class Dash extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
+            // initialize isLoaded to false when non-dummy data is fetched
             isLoaded: true,
             error: false,
+
+            // dummy data sets for chart samples
+            data1: [
+                {
+                    "label": 'Statistic (%)',
+                    "value": 26,
+                    "color": '#004771',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 27,
+                    "color": '#E5E577',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 27,
+                    "color": '#C67017',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 20,
+                    "color": '#AB1F20',
+                }
+            ],
+            data2: [
+                {
+                    "label": 'Statistic (%)',
+                    "value": 33,
+                    "color": '#2B93DB',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 23,
+                    "color": '#1FB45D',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 15,
+                    "color": '#B45C1F',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 29,
+                    "color": '#B41F77',
+                }
+            ],
+            data3: [
+                {
+                    "label": 'Statistic (%)',
+                    "value": 34,
+                    "color": '#AB1F20',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 33,
+                    "color": '#004771',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 33,
+                    "color": '#E5E577',
+                }
+            ],
+            data4: [
+                {
+                    "label": 'Statistic (%)',
+                    "value": 33,
+                    "color": '#9467BD',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 33,
+                    "color": '#FF7F0E',
+                },
+                {
+                    "label": 'Statistic (%)',
+                    "value": 34,
+                    "color": '#2CA02C',
+                }
+            ]
         }
     }
 
     render() {
 
         const { error, isLoaded } = this.state;
-        
-        const data1 = [
-            {
-                "label": 'Statistic (%)',
-                "value": 26,
-                "color": '#004771',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 27,
-                "color": '#E5E577',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 27,
-                "color": '#C67017',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 20,
-                "color": '#AB1F20',
-            }
-        ]
-        
-        const data3 = [
-            {
-                "label": 'Statistic (%)',
-                "value": 30,
-                "color": '#AB1F20',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 70,
-                "color": '#004771',
-            }
-        ]
-
-        const data2 = [
-            {
-                "label": 'Statistic (%)',
-                "value": 33,
-                "color": '#2B93DB',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 23,
-                "color": '#1FB45D',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 15,
-                "color": '#B45C1F',
-            },
-            {
-                "label": 'Statistic (%)',
-                "value": 29,
-                "color": '#B41F77',
-            }
-        ]
 
         return (
             <DashContainer>
+                {/*row container*/}
                 <Grid container>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={1609774}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={200400}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={110300}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={110300}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={6} md={6} sm={12} xs={12}
-                    header='CHART'>
-                        <DonutChart 
-                        data={data1} />
-                    </Widget>
-                    <Widget lg={6} md={6} sm={12} xs={12}
-                    header='CHART'>
-                        <DonutChart 
-                        data={data2} />
-                    </Widget>
+                    {/*widget section*/}
+                    <Grid container lg={3} xs={12}
+                    direction='row'>
+                        <Widget lg={12} xs={6}
+                        header='WIDGET'>
+                            <NumberData data='1, 600, 774'
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                        <Widget lg={12} xs={6}
+                        header='WIDGET'>
+                            <NumberData data='240, 575'
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                    </Grid>
+                    {/*chart section*/}
+                    <Grid container lg={9} xs={12}
+                    direction='row'>
+                        <Widget lg={6} md={6} xs={12}
+                        header='CHART'>
+                            <DonutChart 
+                            data={this.state.data1} />
+                        </Widget>
+                        <Widget lg={6} md={6} xs={12}
+                        header='CHART'>
+                            <DonutChart 
+                            data={this.state.data2} />
+                        </Widget>
+                    </Grid>
                 </Grid>
+                {/*row container*/}
                 <Grid container>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={1609774}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={200400}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={110300}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={3} md={3} sm={6} xs={6}
-                    header='WIDGET'>
-                        <NumberData data={110300}
-                        isLoaded={isLoaded}
-                        error={error}/>
-                    </Widget>
-                    <Widget lg={6} md={6} sm={12} xs={12}
-                    header='CHART'>
-                        <DonutChart 
-                        data={data3} />
-                    </Widget>
-                    <Widget lg={6} md={6} sm={12} xs={12}
-                    header='CHART'>
-                        <DonutChart 
-                        data={data1} />
-                    </Widget>
+                    {/*widget section*/}
+                    <Grid container lg={3} xs={12}
+                    direction='row'>
+                        <Widget lg={12} xs={6}
+                        header='WIDGET'>
+                            <NumberData data='1, 600, 774'
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                        <Widget lg={12} xs={6}
+                        header='WIDGET'>
+                            <NumberData data='240, 575'
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                    </Grid>
+                    {/*chart section*/}
+                    <Grid container lg={9} xs={12}
+                    direction='row'>
+                        <Widget lg={6} md={6} xs={12}
+                        header='CHART'>
+                            <DonutChart 
+                            data={this.state.data3} />
+                        </Widget>
+                        <Widget lg={6} md={6} xs={12}
+                        header='CHART'>
+                            <DonutChart 
+                            data={this.state.data4} />
+                        </Widget>
+                    </Grid>
                 </Grid>
             </DashContainer>
         );

@@ -6,7 +6,11 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 const widgetStyle = makeStyles({
+    root: {
+        display: 'flex',
+    },
     card: {
+        flexGrow: 1,
         background: '#202a3b',
         borderRadius: '7px',
         margin: '10px',
@@ -15,6 +19,7 @@ const widgetStyle = makeStyles({
         color: '#b7b7b7',
     },
     content: {
+        flexGrow: 1,
         display: 'flex',
         flexFlow: 'row wrap',
         justifyContent: 'space-around',
@@ -29,7 +34,7 @@ export default function Widget(props) {
     const widget = widgetStyle();
     
     return(
-        <Grid item 
+        <Grid item className={widget.root}
         lg={props.lg}
         md={props.md}
         sm={props.sm}

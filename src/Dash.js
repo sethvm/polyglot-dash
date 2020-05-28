@@ -16,13 +16,22 @@ export default class Dash extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
             // initialize isLoaded to false when non-dummy data is fetched
             isLoaded: true,
             error: false,
-
+            // random dummy numbers for widgets
+            widgetNumbers: [
+                Math.floor(Math.random() * Math.floor(10000000)),
+                Math.floor(Math.random() * Math.floor(1000000)),
+                Math.floor(Math.random() * Math.floor(1000000)),
+                Math.floor(Math.random() * Math.floor(10000)),
+                Math.floor(Math.random() * Math.floor(1000000)),
+                Math.floor(Math.random() * Math.floor(100000)),
+                Math.floor(Math.random() * Math.floor(1000000)),
+                Math.floor(Math.random() * Math.floor(100000))
+            ],
             // dummy data sets for chart samples
-            data1: [
+            chart1: [
                 {
                     "label": 'Statistic (%)',
                     "value": 26,
@@ -44,7 +53,7 @@ export default class Dash extends Component {
                     "color": '#AB1F20',
                 }
             ],
-            data2: [
+            chart2: [
                 {
                     "label": 'Statistic (%)',
                     "value": 33,
@@ -66,7 +75,7 @@ export default class Dash extends Component {
                     "color": '#B41F77',
                 }
             ],
-            data3: [
+            chart3: [
                 {
                     "label": 'Statistic (%)',
                     "value": 34,
@@ -83,7 +92,7 @@ export default class Dash extends Component {
                     "color": '#E5E577',
                 }
             ],
-            data4: [
+            chart4: [
                 {
                     "label": 'Statistic (%)',
                     "value": 33,
@@ -100,78 +109,99 @@ export default class Dash extends Component {
                     "color": '#2CA02C',
                 }
             ]
+        } 
+    }
+
+    formatWidgetNumbers(numbers) {
+        console.log('function called!');
+        // create new copty of array
+        const newNumbers = [...numbers];
+        // format elements with commas
+        for (var i = 0; i < newNumbers.length; i++) {
+            newNumbers[i] = newNumbers[i].toLocaleString();
         }
+        return newNumbers;
     }
 
     render() {
 
-        const { error, isLoaded } = this.state;
+        const { error, isLoaded, widgetNumbers } = this.state;
+
+        const widgetData = this.formatWidgetNumbers(widgetNumbers);
 
         return (
             <DashContainer>
                 {/*row container*/}
                 <Grid container>
                     {/*widget section*/}
-                    <Grid container lg={3} xs={12}
-                    direction='row'>
-                        <Widget lg={12} xs={6}
-                        header='WIDGET'>
-                            <NumberData data='1, 600, 774'
+                    <Grid container xs={12} direction='row'>
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[0]}
                             isLoaded={isLoaded}
                             error={error}/>
                         </Widget>
-                        <Widget lg={12} xs={6}
-                        header='WIDGET'>
-                            <NumberData data='240, 575'
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[1]}
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[2]}
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[3]}
                             isLoaded={isLoaded}
                             error={error}/>
                         </Widget>
                     </Grid>
                     {/*chart section*/}
-                    <Grid container lg={9} xs={12}
-                    direction='row'>
-                        <Widget lg={6} md={6} xs={12}
-                        header='CHART'>
+                    <Grid container xs={12} direction='row'>
+                        <Widget md={6} xs={12} header='CHART'>
                             <DonutChart 
-                            data={this.state.data1} />
+                            data={this.state.chart1} />
                         </Widget>
-                        <Widget lg={6} md={6} xs={12}
-                        header='CHART'>
+                        <Widget md={6} xs={12} header='CHART'>
                             <DonutChart 
-                            data={this.state.data2} />
+                            data={this.state.chart2} />
                         </Widget>
                     </Grid>
                 </Grid>
                 {/*row container*/}
                 <Grid container>
                     {/*widget section*/}
-                    <Grid container lg={3} xs={12}
-                    direction='row'>
-                        <Widget lg={12} xs={6}
-                        header='WIDGET'>
-                            <NumberData data='1, 600, 774'
+                    <Grid container xs={12} direction='row'>
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[4]}
                             isLoaded={isLoaded}
                             error={error}/>
                         </Widget>
-                        <Widget lg={12} xs={6}
-                        header='WIDGET'>
-                            <NumberData data='240, 575'
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[5]}
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[6]}
+                            isLoaded={isLoaded}
+                            error={error}/>
+                        </Widget>
+                        <Widget md={3} xs={6} header='WIDGET'>
+                            <NumberData data={widgetData[7]}
                             isLoaded={isLoaded}
                             error={error}/>
                         </Widget>
                     </Grid>
                     {/*chart section*/}
-                    <Grid container lg={9} xs={12}
-                    direction='row'>
-                        <Widget lg={6} md={6} xs={12}
-                        header='CHART'>
+                    <Grid container xs={12} direction='row'>
+                        <Widget md={6} xs={12} header='CHART'>
                             <DonutChart 
-                            data={this.state.data3} />
+                            data={this.state.chart3} />
                         </Widget>
-                        <Widget lg={6} md={6} xs={12}
-                        header='CHART'>
+                        <Widget md={6} xs={12} header='CHART'>
                             <DonutChart 
-                            data={this.state.data4} />
+                            data={this.state.chart4} />
                         </Widget>
                     </Grid>
                 </Grid>

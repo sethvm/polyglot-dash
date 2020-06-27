@@ -11,9 +11,9 @@ const styleApp = makeStyles ({
         fontFamily: 'Roboto',
     },
     dashboard: {
-        padding: '15px',
         minHeight: '100vh',
-        minWidth: '100%',
+        maxWidth: '1280px',
+        padding: '15px',
     },
 });
 
